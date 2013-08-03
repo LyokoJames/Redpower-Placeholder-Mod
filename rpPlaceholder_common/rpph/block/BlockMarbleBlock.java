@@ -14,18 +14,19 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 
-public class BlockGemBlock extends Block {
+public class BlockMarbleBlock extends Block {
     
-    public static String[] gemBlockNames = {"Ruby Block",
-        "Green Sapphire Block", "Sapphire Block", "","","","","","","","","","","","",""};
+    public static String[] marbleBlockNames = {"Marble", "Basalt", "Marble Brick",
+        "Basalt Cobblestone", "Basalt Brick", "Chiseled Basalt Brick", "Basalt Paver",
+        "", "", "", "", "", "", "", "", ""};
     
     Icon[] icons;
-    
-    public BlockGemBlock(int id) {
-        super(id, Material.iron);
-        this.setUnlocalizedName(Strings.GEM_BLOCK_UNLOC_NAME);
+
+    public BlockMarbleBlock(int id) {
+        super(id, Material.rock);
+        this.setUnlocalizedName(Strings.MARBLE_BLOCK_UNLOC_NAME);
         this.setHardness(5F);
-        this.setStepSound(Block.soundMetalFootstep);
+        this.setStepSound(Block.soundStoneFootstep);
         this.setCreativeTab(RpPlaceholder.tabsRPPH);
     }
     
@@ -36,25 +37,25 @@ public class BlockGemBlock extends Block {
     
     @SuppressWarnings({ "unchecked", "rawtypes" })
     public void getSubBlocks(int unknown, CreativeTabs tab, List subItems) {
-        for (int ix = 0; ix < 3; ix++) {
+        for (int ix = 0; ix < 7; ix++) {
             subItems.add(new ItemStack(this, 1, ix));
         }
     }
     
     public void registerIcons(IconRegister iconRegister) {
-        icons = new Icon[3];
-        for (int i = 0; i < 3; i++) {
+        icons = new Icon[7];
+        for (int i = 0; i < 7; i++) {
             icons[i] = iconRegister.registerIcon(Reference.MOD_ID.toLowerCase()
-                    + ":" + gemBlockNames[i]);
+                    + ":" + marbleBlockNames[i]);
         }
     }
     
     @Override
     @SideOnly(Side.CLIENT)
     public Icon getIcon(int id, int meta) {
-        if (meta < 3)
+        if (meta < 7)
             return icons[meta];
         else return icons[0];
     }
-    
+
 }
