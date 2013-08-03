@@ -1,11 +1,14 @@
 package rpph;
 
 import net.minecraft.creativetab.CreativeTabs;
+import rpph.block.ModBlocks;
 import rpph.core.proxy.CommonProxy;
 import rpph.creativetab.CreativeTabRPPH;
+import rpph.item.ModItems;
 import rpph.lib.Reference;
 
 
+import rpph.recipe.CraftingRecipes;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.Mod.Init;
@@ -28,12 +31,13 @@ public class RpPlaceholder {
     
     @PreInit
     public void preInit(FMLPreInitializationEvent event) {
-        
+        ModItems.init();
+        ModBlocks.init();
     }
     
     @Init
     public void init(FMLInitializationEvent event) {
-        
+        CraftingRecipes.init();
     }
     
     @PostInit

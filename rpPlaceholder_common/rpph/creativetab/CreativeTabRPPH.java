@@ -5,6 +5,7 @@ import rpph.lib.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 
 public class CreativeTabRPPH extends CreativeTabs {
 
@@ -19,7 +20,7 @@ public class CreativeTabRPPH extends CreativeTabs {
      */
     public int getTabIconItemIndex() {
 
-        return ItemIds.ITEM_RUBY;
+        return Item.appleRed.itemID;
     }
 
     @Override
