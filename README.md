@@ -1,8 +1,7 @@
-Insert Project Title Here
+Redpower-Placeholder-Mod
 =======================
 
-##Insert Project Specific README here <--
-##Generic README below \\/
+A mod requested by Timmie3054 to help him keep his Red Power worldgen in 1.5.2
 
 People can also use the code themselves in accordance with the included gpl and lgpl liscences.
 
