@@ -1,0 +1,21 @@
+[
+{
+  "modid": "rpPlaceholder",
+  "name": "RedPower Placeholder Mod",
+  "description": "A Mod made by LyokoJames for Timmie3054",
+  "version": "1.0.0",
+  "url": "https://github.com/LyokoJames/Redpower-Placeholder-Mod",
+  "updateUrl": "",
+  "authorList": [
+    "LyokoJames",
+    "Timmie3054"
+  ],
+  "credits": "Pahimar's Let's Mod Tutorial, Forge Wiki, Youtubers: TheGrovesyProject101,  Sciguy1121",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]
