@@ -7,7 +7,6 @@ import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 import rpph.block.BlockGemBlock;
-import rpph.block.ModBlocks;
 import rpph.lib.Reference;
 import rpph.lib.Strings;
 

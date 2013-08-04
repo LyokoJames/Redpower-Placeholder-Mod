@@ -1,5 +1,6 @@
 package rpph.recipe;
 
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import rpph.block.ModBlocks;
 import rpph.item.ModItems;
@@ -18,5 +19,28 @@ public class CraftingRecipes {
                     "B",
                     'B', new ItemStack(ModBlocks.gemBlock, 1, i));
         }
+        
+        GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.marbleBlock, 4, 2),
+                "BB",
+                "BB",
+                'B', new ItemStack(ModBlocks.marbleBlock, 1, 0));
+        
+        GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.marbleBlock, 4, 4),
+                "BB",
+                "BB",
+                'B', new ItemStack(ModBlocks.marbleBlock, 1, 1));
+        
+        GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.marbleBlock, 1, 6),
+                "B",
+                'B', new ItemStack(ModBlocks.marbleBlock, 1, 1));
+        
+        GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.marbleBlock, 4, 5),
+                "BB",
+                "BB",
+                'B', new ItemStack(ModBlocks.marbleBlock, 1, 4));
+        
+        GameRegistry.addShapedRecipe(new ItemStack(Item.stick, 8),
+                "B",
+                'B', ModBlocks.rubberWood);
     }
 }

@@ -2,7 +2,7 @@ package rpph.block.item;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import rpph.block.BlockMarbleBlock;
+import rpph.block.BlockOreBlock;
 import rpph.lib.Reference;
 import rpph.lib.Strings;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -10,14 +10,14 @@ import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 
-public class ItemBlockMarbleBlock extends ItemBlock {
+public class ItemBlockOreBlock extends ItemBlock {
     
     Icon[] icons;
 
-    public ItemBlockMarbleBlock(int id) {
+    public ItemBlockOreBlock(int id) {
         super(id);
         this.setHasSubtypes(true);
-        this.setUnlocalizedName(Strings.MARBLE_BLOCK_UNLOC_NAME);
+        this.setUnlocalizedName(Strings.GEM_BLOCK_UNLOC_NAME);
     }
     
     @Override
@@ -27,23 +27,22 @@ public class ItemBlockMarbleBlock extends ItemBlock {
     
     @Override
     public String getUnlocalizedName(ItemStack itemstack) {
-        return BlockMarbleBlock.marbleBlockNames[itemstack.getItemDamage()];
+        return BlockOreBlock.oreBlockNames[itemstack.getItemDamage()];
     }
     
     public void registerIcons(IconRegister iconRegister) {
-        icons = new Icon[7];
-        for (int i = 0; i < 7; i++) {
+        icons = new Icon[8];
+        for (int i = 0; i < 8; i++) {
             icons[i] = iconRegister.registerIcon(Reference.MOD_ID.toLowerCase()
-                    + ":" + BlockMarbleBlock.marbleBlockNames[i]);
+                    + ":" + BlockOreBlock.oreBlockNames[i]);
         }
     }
     
     @Override
     @SideOnly(Side.CLIENT)
     public Icon getIconFromDamage(int meta) {
-        if (meta < 7)
+        if (meta < 8)
             return icons[meta];
         else return icons[0];
     }
-
 }

@@ -9,7 +9,7 @@ import net.minecraft.item.Item;
 public class ItemRPPH extends Item {
 
     public ItemRPPH(int id) {
-        super(id);
+        super(id - Reference.SHIFTED_ID_RANGE_CORRECTION);
         maxStackSize = 64;
         setNoRepair();
     }

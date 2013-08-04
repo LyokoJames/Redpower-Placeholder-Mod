@@ -25,14 +25,15 @@ public class BlockMarbleBlock extends Block {
     public BlockMarbleBlock(int id) {
         super(id, Material.rock);
         this.setUnlocalizedName(Strings.MARBLE_BLOCK_UNLOC_NAME);
-        this.setHardness(5F);
+        this.setHardness(1.5F);
         this.setStepSound(Block.soundStoneFootstep);
         this.setCreativeTab(RpPlaceholder.tabsRPPH);
     }
     
     @Override
     public int damageDropped (int metadata) {
-        return metadata;
+        if (metadata == 1 || metadata == 6) return 3;
+        else return metadata;
     }
     
     @SuppressWarnings({ "unchecked", "rawtypes" })
